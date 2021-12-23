@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/bitcoinFavicon.png">
+    <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- js -->
+    <script src="jquery-3.4.1.js"></script>
+    <script src="main.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Mansalva|Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c01731a83.js" crossorigin="anonymous"></script>
+    <!-- canvasJS -->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="jquery.canvasjs.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>All About Cryptocurrencies</title>
+</head>
+
+<body class="fluid">
+    <header class="sticky-top" style="position: sticky; margin: 10px; background-color:#f8f9fa; opacity: 0.97;">
+        <h1>All About Cryptocurrencies</h1>
+
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light mx-auto" style="display: inline-block;">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="nav nav-tabs collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-tabs my-2 my-lg-0 ml-2">
+                    <li class="nav-item my-2 my-sm-0">
+                        <a class="nav-link active" href="index.html" style="color: #4c9db6;" id="homeBtm"><span class="fa fa-md fa-home pr-1"></span>Home</a>
+                    </li>
+                    <li class="nav-item my-2 my-sm-0">
+                        <a class="nav-link" style="color: #4c9db6;" id="reportBtn" href="#"><span class="fa fa-md fa-bar-chart pr-1"></span>Live Reports</a>
+                    </li>
+                    <li class="nav-item my-2 my-sm-0">
+                        <a class="nav-link" style="color: #4c9db6;" id="aboutBtn" href="#"><span class="fa fa-sm fa-info pr-1"></span>About</a>
+                    </li>
+                </ul>
+                <span id="mySpinner"></span>
+                <form class="form-inline my-lg-0" autocomplete="off">
+                    <div>
+                        <input class="form-control ml-2 mr-2" type="search" placeholder="Search a Coin" data-toggle="dropdown" aria-label="Search" id="searchInput">
+                        <button type="button" class="btn btn-info my-2 my-0 ml-2" type="submit" id="searchBtn">Search</button>
+                    </div>
+                </form>
+                </span>
+        </nav>
+    </header>
+
+    <div class="parallax">
+        <div class="container-fluid mx-5 px-5">
+            <div id="pageMainDiv" class="row col-md-11" style="opacity: 0.9;"></div>
+            <button type="button" class="btn btn-circle btn-xl col-md-1" id="bTop" href="#pageMainDiv" hidden></button>
+        </div>
+        <div class="mainChart my-5 mx-2" id="chartContainer" style="height: 500px;" ></div>
+    </div>
+
+    <div class="modal fade" id="selectedCoins" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title pl-4" id="selectedCoinsLongTitle"><b>Your Selected Coins</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="showCoins"></div>
+                </div>
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-info pr-2 pl-2" id="toReports">Open Reports</button>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Back to Coin List</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- back to top -->
+</body>
+
+</html>

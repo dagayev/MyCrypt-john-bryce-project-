@@ -1,0 +1,206 @@
+*{
+    max-width: 100%;
+   }
+   
+   #bTop {
+     display: inline-block;
+     background-color: #22444b;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     border-radius: 40px;
+     margin: 2%;
+     position: fixed;
+     bottom: 2%;
+     right: 2%;
+     transition: background-color .3s;
+     box-shadow: 2px 2px 20px #22444d;
+     z-index: 1000;
+   }
+   
+   #bTop:hover {
+     cursor: pointer;
+     background-color: #22444d;
+     box-shadow: 2px 2px 18px #8db9c2;
+   
+   }
+   
+   #bTop:active {
+     background-color: #438b99;
+   }
+   
+   #bTop::after {
+     content: "\f077";
+     font-family: FontAwesome;
+     font-weight: normal;
+     font-style: normal;
+     font-size: 25px;
+     line-height: 25px;
+     color: #fff;
+   }
+   
+   /* aboutPage img */
+   #myImg {
+     float: left;
+     width: 150px;
+     height: 150px;
+     margin-right: 20px;
+     margin-top: 10px;
+   }
+   
+   /* aboutPage content */
+   .pageInfo{
+     margin-top: 10px;
+     padding: 20px;
+     text-align: justify;
+     width: 89%;
+     position: relative;
+     left: 1%;
+     /* font-family: 'Mansalva', cursive; */
+     font-size: 25px;
+     color: #22444d;
+     background-color:#f8f9fa;
+     opacity: 0.9;
+   }
+   
+   body{
+     background-color:#f8f9fa;
+     height: 100%;
+     overflow-x: hidden;
+   }
+   
+   header{
+       /* TODO: check HEADER on scrolling (https://coder-coder.com/sticky-header-animated/) */
+       top: 0%;
+       background-color:#f8f9fa;
+   }
+   
+   h1{
+       font-family: 'Mansalva', cursive;
+       font-size: 65px;
+       text-align: center; 
+       color: #22444d; 
+       line-height: 90px;
+       padding: 0%;
+       margin: 0%;
+   }
+   
+   .parallax {
+     background-image: url("img/parallax_2.jpeg");
+     height: 100%;
+     width: 100%;
+     min-height: 755px;
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   
+   .card:hover{
+     box-shadow: 2px 2px 9px #22444d;
+   }
+   
+   .cardImg {
+     position: relative;
+     /* left:5%; bottom:10%; right: 7%;  */ /*/* for position absolute */
+     max-width: 90px;
+     max-height: 80px;
+   }
+   
+   /* moreInfo btn */
+   .custom {
+     width: 45% !important;
+   }
+   
+   .form-control:focus {
+     border-color: #4c9db6;
+     box-shadow: inset 0 0 1px #4c9db6, 0 0 8px #4c9db6;
+   }
+   
+   .switch {
+     position: absolute;
+     left: 87%;
+     display: inline-block;
+     width: 45px; /**60px */
+     height: 28px; /**34px */
+   }
+   
+   /* Hide default HTML checkbox */
+   .switch input {display:none;}
+     
+   .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #c4cacc; 
+     -webkit-transition: .4s;
+     transition: .4s;
+     border-radius: 34px;
+   } 
+   
+   .slider:before {
+     position: absolute;
+     content: "";
+     height: 20px; /**26px */
+     width: 20px; /**26px */
+     left: 4px; /**4px */
+     bottom: 4px;/**4px */
+     background-color: white;
+     -webkit-transition: .4s;
+     transition: .4s;
+     border-radius: 50%;
+   }
+   
+   input.info:checked + .slider {
+       background-color: #4c9db6;
+   }
+   
+   input:checked + .slider:before {
+     -webkit-transform: translateX(15px);
+     -ms-transform: translateX(15px);
+     transform: translateX(17px); /*17px*/
+   }
+   
+   @media only screen and (max-width: 768px) {
+     /* desktop */
+     .col-md-1 {width: 8.33%;}
+     .col-md-2 {width: 16.66%;}
+     .col-md-3 {width: 25%;}
+     .col-md-4 {width: 33.33%;}
+     .col-md-5 {width: 41.66%;}
+     .col-md-6 {width: 50%;}
+     .col-md-7 {width: 58.33%;}
+     .col-md-8 {width: 66.66%;}
+     .col-md-9 {width: 75%;}
+     .col-md-10 {width: 83.33%;}
+     .col-md-11 {width: 91.66%;}
+     .col-md-12 {width: 100%;}
+     
+     /* mobile phones */
+     [class*="col-"] {
+       width: 100%;
+     }
+   }
+   
+   /* spinner: https://www.digitaldesignjournal.com/best-circular-progress-bar-html-css/ */
+   @keyframes spinner-border {
+     to { transform: rotate(360deg); }
+   } 
+   .spinner-border{
+     display: inline-block;
+     width: 2rem;
+     height: 2rem;
+     vertical-align: text-bottom;
+     border: .25em solid currentColor;
+     border-right-color: transparent;
+     border-radius: 50%;
+     -webkit-animation: spinner-border .75s linear infinite;
+     animation: spinner-border .75s linear infinite;
+   }
+   .spinner-border-sm{
+     height: 1rem;
+     border-width: .2em;
+   }
